@@ -1,55 +1,38 @@
-# Tiny Tapeout project information
+---
 project:
-  title:        "FinQ-Chip: QEC Hardware"      # Project title
-  author:       "Ionela Balint"      # Your name
-  discord:      "Ionela Balint"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
-  description:  "Quantum Error Correction module for Financial Security"      # One line description of what your project does
-  language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
-  clock_hz:     0       # Clock frequency in Hz (or 0 if not applicable)
-
-  # How many tiles your design occupies? A single tile is about 167x108 uM.
-  tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
-
-  # Your top module name must start with "tt_um_". Make it unique by including your github username:
-  top_module:  "tt_um_qec_banking"
-
-  # List your project's source files here.
-  # Source files must be in ./src and you must list each source file separately, one per line.
-  # Don't forget to also update `PROJECT_SOURCES` in test/Makefile.
+  title:        "FinQ-Chip"
+  author:       "Ionela Balint"
+  slack:        ""
+  description:  "Quantum Error Correction HSM module for Banking"
+  language:     "Verilog"
+  clock_hz:     10000000
+  tiles:        "1x1"
+  top_module:   "tt_um_qec_banking"
   source_files:
     - "project.v"
 
-# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 pinout:
-  # Inputs
-  ui[0]: ""
-  ui[1]: ""
-  ui[2]: ""
-  ui[3]: ""
-  ui[4]: ""
-  ui[5]: ""
-  ui[6]: ""
-  ui[7]: ""
-
-  # Outputs
-  uo[0]: ""
-  uo[1]: ""
-  uo[2]: ""
-  uo[3]: ""
-  uo[4]: ""
-  uo[5]: ""
-  uo[6]: ""
-  uo[7]: ""
-
-  # Bidirectional pins
-  uio[0]: ""
-  uio[1]: ""
-  uio[2]: ""
-  uio[3]: ""
-  uio[4]: ""
-  uio[5]: ""
-  uio[6]: ""
-  uio[7]: ""
-
-# Do not change!
-yaml_version: 6
+  ui[0]: "bit1_in"
+  ui[1]: "bit2_in"
+  ui[2]: "bit3_in"
+  ui[3]: "none"
+  ui[4]: "none"
+  ui[5]: "none"
+  ui[6]: "none"
+  ui[7]: "none"
+  uo[0]: "corrected_out"
+  uo[1]: "alert_out"
+  uo[2]: "count_0"
+  uo[3]: "count_1"
+  uo[4]: "count_2"
+  uo[5]: "count_3"
+  uo[6]: "none"
+  uo[7]: "none"
+  uio[0]: "none"
+  uio[1]: "none"
+  uio[2]: "none"
+  uio[3]: "none"
+  uio[4]: "none"
+  uio[5]: "none"
+  uio[6]: "none"
+  uio[7]: "none"
