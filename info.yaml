@@ -22,24 +22,24 @@ project:
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 pinout:
   # Inputs
-  ui[0]: "bit1_in"
-  ui[1]: "bit2_in"
-  ui[2]: "bit3_in"
-  ui[3]: "none"
-  ui[4]: "none"
-  ui[5]: "none"
-  ui[6]: "none"
+  ui[0]: "qubit_0"
+  ui[1]: "qubit_1"
+  ui[2]: "qubit_2"
+  ui[3]: "qubit_3"
+  ui[4]: "qubit_4"
+  ui[5]: "qubit_5"
+  ui[6]: "qubit_6"
   ui[7]: "none"
   
   # Outputs
-  uo[0]: "corrected_out"
-  uo[1]: "alert_out"
-  uo[2]: "count_0"
-  uo[3]: "count_1"
-  uo[4]: "count_2"
-  uo[5]: "count_3"
-  uo[6]: "none"
-  uo[7]: "none"
+  uo[0]: "syndrome_0"
+  uo[1]: "syndrome_1"
+  uo[2]: "syndrome_2"
+  uo[3]: "qldpc_alert"
+  uo[4]: "count_0"
+  uo[5]: "count_1"
+  uo[6]: "count_2"
+  uo[7]: "count_3"
 
   # Bidirectional pins
   uio[0]: "none"
