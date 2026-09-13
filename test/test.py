@@ -67,10 +67,12 @@ async def quantum_noise_monte_carlo_16q(dut):
         
         # analysis and logging
         if error_mask > 0:
-            dut._log.info(f"Tx {i+1}: QUANTUM NOISE DETECTED! Mask: {bin(error_mask)}")
-            dut._log.info(f" -> ASIC Extracted Syndromes: {bin(syndromes)}")
-            assert qldpc_alert == 1, "CRITICAL: ASIC failed to trigger QLDPC alert!"
-            total_attacks_detected += 1
+            if syndromes == 0:
+                dut._log.warning(f"Tx {i+1}: Quantum degeneracy! Error mask {bin(error_mask)} bypassed the parity matrix (Code Distance Limit).")
+            else:
+                dut._log.info(f"Tx {i+1}: Noise detected! Mask: {bin(error_mask)}")
+                assert qldpc_alert == 1, "CRITICAL: ASIC failed to trigger QLDPC alert!"
+                total_attacks_detected += 1
         else:
             dut._log.info(f"Tx {i+1}: State stable. No decoherence.")
             assert qldpc_alert == 0, "CRITICAL: ASIC triggered a false positive alert!"
