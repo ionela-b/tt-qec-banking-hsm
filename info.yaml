@@ -22,34 +22,34 @@ project:
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 pinout:
   # Inputs
-  ui[0]: "qubit_0"
-  ui[1]: "qubit_1"
-  ui[2]: "qubit_2"
-  ui[3]: "qubit_3"
-  ui[4]: "qubit_4"
-  ui[5]: "qubit_5"
-  ui[6]: "qubit_6"
-  ui[7]: "none"
+  ui[0]: "q_0"
+  ui[1]: "q_1"
+  ui[2]: "q_2"
+  ui[3]: "q_3"
+  ui[4]: "q_4"
+  ui[5]: "q_5"
+  ui[6]: "q_6"
+  ui[7]: "q_7"
   
   # Outputs
-  uo[0]: "syndrome_0"
-  uo[1]: "syndrome_1"
-  uo[2]: "syndrome_2"
-  uo[3]: "qldpc_alert"
-  uo[4]: "count_0"
-  uo[5]: "count_1"
-  uo[6]: "count_2"
-  uo[7]: "count_3"
+  uo[0]: "syn_0"
+  uo[1]: "syn_1"
+  uo[2]: "syn_2"
+  uo[3]: "syn_3"
+  uo[4]: "alert"
+  uo[5]: "cnt_0"
+  uo[6]: "cnt_1"
+  uo[7]: "cnt_2"
 
   # Bidirectional pins
-  uio[0]: "none"
-  uio[1]: "none"
-  uio[2]: "none"
-  uio[3]: "none"
-  uio[4]: "none"
-  uio[5]: "none"
-  uio[6]: "none"
-  uio[7]: "none"
+  uio[0]: "q_8"
+  uio[1]: "q_9"
+  uio[2]: "q_10"
+  uio[3]: "q_11"
+  uio[4]: "q_12"
+  uio[5]: "q_13"
+  uio[6]: "q_14"
+  uio[7]: "q_15"
 
 # Do not change!
 yaml_version: 6
